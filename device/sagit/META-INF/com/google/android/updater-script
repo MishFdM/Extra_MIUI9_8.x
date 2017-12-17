@@ -1,6 +1,5 @@
-getprop("ro.product.device") == "sagit" || abort("E3004: This package is for \"sagit\" devices; this is a \"" + getprop("ro.product.device") + "\".");
 show_progress(0.750000, 0);
-ui_print("Patching system image unconditionally...");
+ui_print("Installing MIUI update...");
 block_image_update("/dev/block/bootdevice/by-name/system", package_extract_file("system.transfer.list"), "system.new.dat", "system.patch.dat") ||
   abort("E1001: Failed to update system image.");
 show_progress(0.050000, 5);
